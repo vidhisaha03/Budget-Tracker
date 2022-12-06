@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+	 {% comment %} <link rel="stylesheet" type="text/css" href=try.css> {% endcomment %}
+	 {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'addmoney.css' %}">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+ <title>
+	 My Wallet
+			</title>
+        
+    </head>
+	<body>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+	 
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+					
+                    <div class="container2">
+						
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h1 style="text-align: center; color: rgb(0, 3, 35); font-family: 'Courier New', monospace; font-size: 50px;">MY WALLET</h1></div>
+                                    <form method="post" action="/addmoney_submission/">
+                                    {% csrf_token %}
+                  
+																			
+                   <div class="form-check">
+					
+										<label class="form-check-label" for="add_money" style="text-align: center; color: rgb(252, 251, 249); font-family: 'Courier New', monospace; font-size: 20px;">
+                  <input class="form-check-input" type="radio" name="add_money" id="add_money" value="Expense" checked requiredb >
+										Expense 
+										</label>
+										 
+                 
+										
+																			</div>	
+									
+			
+		<div>							
+  <label for="quantity" style="text-align: center; color: rgb(252, 251, 249); font-family: Garamond, serif; font-size: 20px;"><br>Enter Amount:</label><br>
+  <input type="number" name="quantity" required><br>
+  <br>
+			</div>
+																	
+										<div>
+  <label style="text-align: center; color: rgb(252, 251, 249); font-family: Garamond, serif; font-size: 20px;">
+    Expense Date:<br>
+    <input type="date" name="Date">
+  </label><br>
+										</div>
+										<div>
+	<div class="f1" style="text-align: center; color: rgb(252, 251, 249); font-family: Garamond, serif; font-size: 20px;">
+		<br>Select category:<br>
+	<select class="Category" name="Category" required><br>
+  <option value="Food">Food</option>
+  <option value="Travel">Travel</option>
+  <option value="Shopping">shopping</option>
+	<option value="Necessities">Necessities</option>
+	<option value="Entertainment">Entertainment</option>
+	<option value="Others">Others</option>
+		
+</select><br>
+											</div>
+																	</div>
+										<div class="btn">
+  <button type="submit" class="b2" href='/addmoney'> Submit </button>
+										</div>
+	<!--<input type="button" class="b2"  onclick="location.href='/addmoney'" value="submit!">-->
+</form>
+																	
+															</div>
+													</div>
+										
+													
+											</div>
+									</div>
+	
+							</main>
+					</div>
+	</div>
+		</div>
+	</body>
+</html>
